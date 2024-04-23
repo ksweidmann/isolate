@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from time import time
 import argparse
@@ -37,7 +37,7 @@ def merge_dicts(*dict_args):
         if dictionary is None:
             continue
         else:
-            for key in dictionary.keys():
+            for key in list(dictionary):
                 if dictionary[key] is None:
                     del dictionary[key]
         result.update(dictionary)
