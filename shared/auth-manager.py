@@ -126,7 +126,7 @@ class AuthManager(object):
         else:
             redis_key = 'server_{0}'.format(self.params['server_id'])
             self.redis.delete(redis_key)
-            LOGGER.warn(redis_key + ' deleted')
+            LOGGER.warning(redis_key + ' deleted')
 
     def dump_host(self):
         if self.params['server_id'] is not None:
@@ -152,7 +152,7 @@ class AuthManager(object):
         else:
             redis_key = 'ssh_config_{0}'.format(self.params['project_name'])
             self.redis.delete(redis_key)
-            LOGGER.warn(redis_key + ' deleted')
+            LOGGER.warning(redis_key + ' deleted')
 
     def dump_project_config(self):
         if self.params['project_name'] is not None:
